@@ -2,5 +2,8 @@
   "name": "Leclerc Shopping Cart Extension",
   "version": "0.0",
   "description": "Help You Get a clean list of products purchased",
-  "manifest_version": 1
+  "manifest_version": 2,
+  "background": {
+    "scripts": [ "background.js" ]
+  }
 }
