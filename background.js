@@ -1,2 +1,5 @@
-// alert("Hello from the Chrome Extension");
-console.log("Hello from the Chrome extension");
+chrome.browserAction.onClicked.addListener((tab) => {
+    chrome.tabs.executeScript({
+        code: 'document.body.style.backgroundColor="#C3413B"'
+    });
+});
