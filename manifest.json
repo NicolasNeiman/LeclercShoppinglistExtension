@@ -1,14 +1,19 @@
 {
   "name": "Leclerc Shopping Cart Extension",
-  "version": "0.0",
+  "version": "0.1",
   "description": "Help You Get a clean list of products purchased",
-  "manifest_version": 2,
-  "background": {
-    "scripts": [ "background.js" ]
-  },
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "storage"
   ],
   "browser_action": {
-  }
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [ "*://*/*" ],
+      "js": [ "./javascript/contentscript.js" ]
+    }
+  ],
+  "manifest_version": 2
 }
